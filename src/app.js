@@ -11,34 +11,28 @@ const resultUserChoice = (userChoice) => {
     const computerChoice = getRandomOption();
     console.log(`el usuario elige ${userChoice}`);
     console.log(`el sistema elige ${computerChoice}`);
-       
+
 }
 
 const playGame = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
-        console.log("Es un empate");
-        
-    }else if ((userChoice === "rock" && (computerChoice === "scissors" || computerChoice === "lizard"))) {
-    console.log("you win");
-    }else if ((userChoice === "paper" && (computerChoice ==="rock" || computerChoice === "spock"))) {
-        console.log("you win");
-        
-    }else if ((userChoice === "scissors" && (computerChoice ==="paper" || computerChoice === "lizard"))) {
-        console.log("you win");
-        
-    }else if ((userChoice === "lizard" && (computerChoice ==="paper" || computerChoice === "spock"))) {
-        console.log("you win");
-        
-    }else if ((userChoice === "spock" && (computerChoice ==="scissors" || computerChoice === "rock"))) {
-        console.log("you win");
-        
+        return console.log("Es un empate");
     }
-else {
+    if ((userChoice === "rock" && (computerChoice === "scissors" || computerChoice === "lizard"))) {
+        return console.log("you win");
+    }
+    if ((userChoice === "paper" && (computerChoice === "rock" || computerChoice === "spock"))) {
+        return console.log("you win");
+    }
+    if ((userChoice === "scissors" && (computerChoice === "paper" || computerChoice === "lizard"))) {
+        return console.log("you win");
+    }
+    if ((userChoice === "lizard" && (computerChoice === "paper" || computerChoice === "spock"))) {
+        return console.log("you win");
+    }
+    if ((userChoice === "spock" && (computerChoice === "scissors" || computerChoice === "rock"))) {
+        return console.log("you win");
+    }
     console.log("has perdido intentalo de nuevo");
-    
-}
-
-
-
 }
 playGame(userChoice, getRandomOption());
